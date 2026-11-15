@@ -32,6 +32,8 @@ daily quiz videos. It is not offered to the public, and nobody else can sign in 
 <ul>
   <li>Uploads the channel's own quiz videos (made on the owner's computer) to that same channel, with their title,
     description and tags, and schedules when each one becomes public.</li>
+  <li>Posts the channel's own comments under the channel's own videos (the day's bonus question), and the channel's
+    replies to viewers' comments there.</li>
   <li>Reads the public comments under the channel's own bonus-question videos to find the first three correct answers,
     whose YouTube display names are then thanked ("shoutout") in a later video. There are no prizes.</li>
 </ul>
@@ -47,7 +49,8 @@ daily quiz videos. It is not offered to the public, and nobody else can sign in 
 
 <h3>Data we access</h3>
 <ul>
-  <li><strong>The owner's YouTube account</strong>, through Google sign-in (OAuth), with permission to upload videos. Only the channel owner signs in. The sign-in token is kept on the owner's computer and is never shared.</li>
+  <li><strong>The owner's YouTube account</strong>, through Google sign-in (OAuth), with permission to upload videos and to
+    post comments and replies. Only the channel owner signs in. The sign-in token is kept on the owner's computer and is never shared.</li>
   <li><strong>Public comments under the channel's own bonus-question videos</strong>: the commenter's public display name,
     the comment text and when it was posted, read through the YouTube Data API.</li>
 </ul>
@@ -56,7 +59,7 @@ and for the same purpose. That part does not use the YouTube API Services.</p>
 
 <h3>How we use it</h3>
 <ul>
-  <li>The owner's authorization is used only to upload and schedule the channel's own videos.</li>
+  <li>The owner's authorization is used only to upload and schedule the channel's own videos and to post the channel's own comments and replies.</li>
   <li>Comments are read only to check answers to the bonus question. The display names of up to three people who answered
     correctly first are shown in a later video and its description, as a public thank-you.</li>
   <li>We do not use any of this data for advertising, profiling or any other purpose, and we never sell or share it.</li>
